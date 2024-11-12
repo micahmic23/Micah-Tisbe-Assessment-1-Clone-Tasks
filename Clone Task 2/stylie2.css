@@ -1,0 +1,351 @@
+:root { /* The root attribute creates variables that are used throughout the CSS for styling. */
+    --background_color: #070410; /* Set as the web page's background color. */
+    --nav_color: #231651; /* Set as the navigation menu's color. */
+    --bttn_color: #4DCCBD; /* Set as button color. */
+    --bttn_hov_color: #3d8c95; /* Set as button color on hover. */
+    --bttn_txt_hov_color: white; /* Set as button's text color on hover. */
+    
+    /* Root variables for setting the spacing. */
+    --small: 16px; /* The small spacing is set. */
+    --mobile: 16px; /* The mobile spacing is set. */
+    --tablet: 32px; /* The tablet spacing is set. */
+    --desktop: 48px; /* The desktop spacing is set. */
+  }
+  
+  * { /* Performs the styling on the whole page. */
+    margin: 0; /* Clears any existing default margin. */
+    padding: 0; /* Clears existing default padding. */
+    box-sizing: border-box; /* Sets a specific width and height including additional padding and border. */
+    text-decoration: none; /* Clears any default text styling  */
+    font-family: "Lato", sans-serif; /* Sets the text font to 'Lato' imported from Google Fonts. */
+    background-color: var(--background_color); /* Background color is set. */
+  }
+  
+  nav { /* Stylesheet for the website's navigation bar. */
+    display: flex; /* A flex box is set for performing advanced layouts. */
+    align-items: center; /* Centers the items position vertically. */
+    justify-content: space-between; /* Creates even spacing in-between items. */
+    height: 70px; /* Sets the navigation bar's height. */
+    padding: var(--desktop) var(--small); /* Padding added using the root variables created. */
+    margin-bottom: 20px; /* Adds bottom margin for the shadow to appear. */
+    box-shadow: 10px 10px #150e2c; /* Creates a shadow effect. */
+    background-color: var(--nav_color); /* Sets the nav's background color. */
+  }
+  
+  nav h1 { /* Stylesheet for the title heading/logo in the nav bar. */
+    font-family: "Teko", sans-serif; /* The font 'Teko' is applied for the logo. */
+    color: white; /* Sets the text color to white. */
+    background-color: var(--nav_color); /* Navigation bar color is set. */
+    font-size: 3em; /* Sets the header's font size. */
+    transition: color 0.3s; /* Creates a transition on the logo when interacted. */
+  }
+  
+  nav h1:hover { /* Logo color change when hovered. */
+    color: #4DCCBD; /* Sets the color when hovered. */
+  }
+  
+  .nav_list ul { /* Stylesheet for the unordered list items in the nav bar. */
+    display: flex; /* Applies a flexbox layout. */
+    list-style: none; /* Clears default bullet listing on nav items. */
+    background-color: var(--nav_color); /* Navigation bar color is set. */
+  }
+  
+  .nav_list li { /* Stylesheet for each nav list item. */
+    margin: 0 var(--desktop); /* Sets up a margin value of 48px. */
+  }
+  
+  .nav_list a { /* Stylesheet for each individual nav item link. */
+    color: white; /* Sets the text color to white. */
+    background-color: var(--nav_color); /* Navigation bar color is set. */
+    transition: color 0.3s; /* Creates a transition on the nav item when interacted. */
+    cursor: pointer; /* Changes the mouse cursor to pointer. */
+  }
+  
+  .nav_list a:hover { /* Changes the color on item when interacted. */
+    color: #4DCCBD; /* Sets the nav item color when interacted. */
+  }
+  
+  nav button { /* Stylesheet for the nav bar's search button */
+    background-color: var(--bttn_color); /* Sets the search button's background color. */
+    color: var(--background_color); /* Sets the search button's text color.*/
+    padding: var(--small); /* Creates a padding of 16px. */
+    border: none; /* Clears any default border. */
+    border-radius: 5px; /* Creates rounded corners. */
+    font-family: "Teko", sans-serif; /* Sets the button's font to 'Teko'. */
+    font-size: 2em; /* Sets the text button's font size. */
+    cursor: pointer; /* Changes the mouse cursor to pointer. */
+    transition: background_color 0.3s, color 0.3s; /* Creates a transition on the button when interacted. */
+  }
+  
+  nav button:hover { /* Stylesheet for search button when hovered. */
+    background-color: var(--bttn_hov_color); /* Changes the button's background color when hovered. */
+    color: var(--bttn_txt_hov_color); /* Changes the button's text color when hovered. */
+  }
+  
+  .movies_sect { /* Stylesheet for the movies container. */
+    display: grid; /* Grid layout is applied. */
+    grid-template-areas: /* Specifies area positioning for each movie preview card. */
+      "moviecard1 moviecard1"
+      "moviecard2 moviecard3"
+      "moviecard4 moviecard4"
+      "moviecard5 moviecard5"
+      "moviecard6 moviecard6";
+    grid-template-columns: 1fr 1fr; /* Specifies a position of two equal columns set. */
+    width: 900px; /* Sets the width of the movie container. */
+    margin: 0 auto; /* Centers the container's position. */
+  }
+
+  img { /* Stylesheet for images */
+    border: var(--background_color) 6px solid; /* Creates a solid border around the images using the main background color. */
+  }  
+
+  p { /* Stylesheet for all the paragraph components. */
+    font-size: 1.5em; /* Sets the paragraphs' font size. */
+    background-color: var(--nav_color); /* Sets the background color of the card. */
+  }
+
+  button { /* Stylesheet for the buttons. */
+    padding: var(--small) var(--desktop); /* Padding is set. */
+    background-color: var(--bttn_color); /* Background color is added. */
+    color: var(--background_color); /* Dark Text color is added. */
+    border-radius: 5px; /* Creates rounded corners. */
+    border: none; /* Clears any default borders. */
+    font-family: "Teko", sans-serif; /* 'Teko' font is set. */
+    font-size: 2em; /* Button font size is set. */
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s, color 0.3s; /* Creates a transition on the button when interacted. */
+  }
+  
+  button:hover { /* Stylesheet for buttons when hovered on. */
+    background-color: var(--bttn_hov_color); /* Button background color is set. */
+    color: var(--bttn_txt_hov_color); /* Button text color is set. */
+  }
+
+  .movie1 { /* Stylesheet for the movie1 preview card.  */
+    grid-area: moviecard1; /* Specifies the grid area created earlier. */
+    display: flex; /* Flexbox layout is applied. */
+    flex-direction: column; /* Displays the cards vertically. */
+    margin: var(--desktop) 0; /* Creates a vertical margin to the card. */
+    background-color: var(--nav_color); /* Sets the background color of the card. */
+    box-shadow: 10px 10px #130935; /* Shadow effect is set. */
+  }
+  
+  .movie1 img { /* Stylesheet for movie1's image. */
+    height: 400px; /* Sets the image height. */
+    width: 100%; /* Sets the image width. */
+  }
+  
+  .movie_text1 { /* Stylesheet for movie1's text. */
+    display: flex; /* Flexbox is applied for easy layout. */
+    padding: var(--small); /* Creates padding. */
+    gap: var(--small); /* Creates spacing in-between text elements. */
+    color: white; /* Sets the text color.*/
+    background-color: var(--nav_color); /* Sets the background color of the card. */
+  }
+  
+  .movie2 { /* Stylesheet for the movie2 preview card. */
+    grid-area: moviecard2; /* Specifies the grid area created earlier. */
+    display: flex; /* Flexbox layout is applied. */
+    flex-direction: column; /* Displays the cards vertically. */
+    width: 420px; /* Sets the movie card's width. */
+    margin-bottom: var(--desktop); /* Sets bottom margin. */
+    background-color: var(--nav_color); /* Sets the background color of the card. */
+    box-shadow: 10px 10px #130935; /* Shadow effect is set. */
+  }
+  
+  .movie3 { /* Stylesheet for the movie3 preview card. */
+    grid-area: moviecard3; /* Specifies the grid area created earlier. */
+    display: flex; /* Flexbox layout is applied. */
+    flex-direction: column; /* Displays the cards vertically. */
+    width: 420px; /* Sets the movie card's width. */
+    margin-left: auto; /* Positions the card to the right side. */
+    margin-bottom: var(--desktop); /* Sets bottom margin. */
+    background-color: var(--nav_color); /* Sets the background color of the card. */
+    box-shadow: 10px 10px #130935; /* Shadow effect is set. */
+  }
+  
+  .movie2 img, .movie3 img { /* Stylesheet for movie2 and movie3 images. */
+    width: 420px; /* Sets the image's width. */
+    height: 420px; /* Set's the image's height. */
+  }
+  
+  .movie_text2, .movie_text3 { /* Stylesheet for movie2 and movie3 texts. */
+    display: flex; /* Flexbox layout is applied. */
+    flex-direction: column; /* Displays the cards vertically. */
+    padding: var(--small); /* A padding of 16px is set. */
+    color: white; /* Text color is set to white. */
+    background-color: var(--nav_color); /* Sets the background color of the card. */
+  }
+  
+  .movie_text2 button { /* Stylesheet for movie2's button. */
+    margin-top: var(--small); /* Top margin is added. */
+  }
+  
+  .movie_text3 button { /* Stylesheet for movie3's button. */
+    margin-top: 45px; /* Top margin is added. */
+  }
+  
+  .movie4 { /* Stylesheet for the movie4 preview card. */
+    grid-area: moviecard4; /* Specifies the grid area created earlier. */
+    display: flex; /* Flexbox layout is applied. */
+    margin-bottom: var(--desktop); /* Sets bottom margin. */
+    background-color: var(--nav_color); /* Sets the background color of the card. */
+    box-shadow: 10px 10px #130935; /* Shadow effect is set. */
+  }
+  
+  .movie_text4 { /* Stylesheet for movie4's text. */
+    display: flex; /* Flexbox layout is applied. */
+    flex-direction: column; /* Displays the cards vertically. */
+    justify-content: space-between; /* Creates even spacing in-between items. */
+    padding: var(--small); /* A padding of 16px is set. */
+    color: white; /* Text color is set to white. */
+    background-color: var(--nav_color); /* Sets the background color of the card. */
+    
+  }
+  
+  .movie5 { /* Stylesheet for the movie5 preview card. */
+    grid-area: moviecard5; /* Specifies the grid area created earlier. */
+    display: flex; /* Flexbox layout is applied. */
+    margin-bottom: var(--desktop); /* Sets bottom margin. */
+    background-color: var(--nav_color); /* Sets the background color of the card. */
+    box-shadow: 10px 10px #130935; /* Shadow effect is set. */
+  }
+  
+  .movie_text5 { /* Stylesheet for movie4's text. */
+    display: flex; /* Flexbox layout is applied. */
+    flex-direction: column; /* Displays the cards vertically. */
+    justify-content: space-between; /* Creates even spacing in-between items. */
+    padding: var(--small); /* A padding of 16px is set. */
+    color: white; /* Text color is set to white. */
+    background-color: var(--nav_color); /* Sets the background color of the card. */
+    
+  }
+
+  .movie6 { /* Stylesheet for the movie6 preview card. */
+    grid-area: moviecard6; /* Specifies the grid area created earlier. */
+    display: flex; /* Flexbox layout is applied. */
+    margin-bottom: var(--desktop); /* Sets bottom margin. */
+    background-color: var(--nav_color); /* Sets the background color of the card. */
+    box-shadow: 10px 10px #130935; /* Shadow effect is set. */
+  }
+
+  .movie_text6 { /* Stylesheet for movie4's text. */
+    display: flex; /* Flexbox layout is applied. */
+    flex-direction: column; /* Displays the cards vertically. */
+    justify-content: space-between; /* Creates even spacing in-between items. */
+    padding: var(--small); /* A padding of 16px is set. */
+    color: white; /* Text color is set to white. */
+    background-color: var(--nav_color); /* Sets the background color of the card. */
+    
+  }
+
+   .movie4 img, .movie5 img, .movie6 img { /* Stylesheet for movie4, movie5, and movie6 images. */
+    width: 420px; /* Sets the image's width. */
+    height: 100%; /* Set's the image's height. */
+  }
+  
+  @media screen and (max-width: 1024px) { /* Stylesheet for tablet screen devices. */
+
+    body { /* Stylesheet for webpage's body. */
+        padding-bottom: var(--tablet); /* Bottom padding is set. */
+      }
+
+    nav { /* Alters the navigation bar for tablet screens. */
+      margin-bottom: var(--tablet); /* Sets bottom margin. */
+      box-shadow: 10px 10px #150e2c; /* Creates a shadow effect. */
+    }
+    
+    .nav_list li { /* Alters nav list items spacing. */
+      margin: 0 var(--small); /* A margin of 16px is set for each list. */
+    }
+  
+    .movies_sect { /* Alters movie container. */
+      grid-template-areas: /* Changes grid area positions. */
+        "moviecard1 moviecard2"
+        "moviecard3 moviecard4"
+        "moviecard5 moviecard6";
+      margin: 0 auto; /* Centers the container's position. */
+      width: 670px; /* Sets the movie container's width. */
+      grid-row-gap: var(--tablet); /* Sets spacing between cards vertically. */
+    }
+  
+    .movie1, .movie2, .movie3, .movie4, .movie5, .movie6 { /* Apply same stylesheet for the movie cards. */
+      display: flex; /* Flexbox layout is applied. */
+      flex-direction: column; /* Displays the cards vertically. */
+      margin: auto; /* Centers the card's position. */
+      width: 300px; /* Sets the cards' width. */
+      height: 100%; /* Sets the cards' height. */
+    }
+  
+    .movies_sect img { /* Stylesheet for all card images. */
+      width: 300px; /* Sets the images' width. */
+      height: 100%; /* Sets the images' height. */
+    }
+  
+    .movie_text1, .movie_text2, .movie_text3, .movie_text4, .movie_text5, .movie_text6 { /* Apply same stylesheet for the text section of the cards. */
+      display: flex; /* Flexbox layout is applied. */
+      flex-direction: column; /* Displays the text elements vertically. */
+    }
+  
+    .movies_sect button { /* Apply same stylesheet for all the buttons in the cards. */
+      margin-top: var(--tablet); /* Top margin is added. */
+    }
+  
+    .movie2 button { /* Modify movie2's button stylesheet. */
+      margin-top: 48px; /* Top margin is added. */
+    }
+  
+    .movie3 button { /* Modify movie3's button stylesheet. */
+      margin-top: 90px; /* Top margin is added. */
+    }
+
+    .movie5 button { /* Modify movie5's button stylesheet. */
+      margin-top: 119px; /* Top margin is added. */
+    }
+  }
+  
+  @media screen and (max-width: 720px) { /* Stylesheet for mobile screen devices. */
+
+    body { /* Stylesheet for webpage's body. */
+        padding-bottom: 0; /* Clears bottom padding. */
+      }
+
+    nav { /* Alters the navigation bar for tablet screens. */
+      margin-bottom: var(--mobile); /* Bottom margin is added. */
+      box-shadow: none; /* Clears shadow. */
+    }
+  
+    nav h1 { /* Modifies logo size. */
+      font-size: 2em; /* Smaller font size is set. */
+    }
+  
+    .nav_list { /* Conceals nav_list. */
+      display: none; /* Nothing to display. */
+    }
+  
+    .movies_sect { /* Alters movie container. */
+      grid-template-areas: /* Changes grid area positions. */
+        "moviecard1"
+        "moviecard2"
+        "moviecard3"
+        "moviecard4"
+        "moviecard5"
+        "moviecard6";
+      display: flex; /* Flexbox layout is applied. */
+      flex-direction: column; /* Displays the cards vertically. */
+      justify-content: center; /* Displays the cards on the center. */
+      align-items: center; /* Positions the cards in the middle. */
+      margin: 20px auto; /* Centers the container's position. */
+      grid-row-gap: var(--mobile); /* Vertical spacing is added. */
+      width: 100%; /* Sets the container's full width. */
+    }
+  
+    .movie1, .movie2, .movie3, .movie4, .movie5, .movie6 { /* Apply same stylesheet for all movie cards. */
+      width: 360px; /* Sets each card's width. */
+      box-shadow: none; /* Clears shadow. */
+    }
+  
+    .movies_sect img { /* Apply same stylesheet for all movie card images. */
+      width: 360px; /* Sets the images' width. */
+    }
+  }
