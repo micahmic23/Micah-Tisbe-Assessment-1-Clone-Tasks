@@ -1,0 +1,359 @@
+* { /* Performs the styling on the whole page. */
+    margin: 0; /* Clears any existing default margin. */
+    padding: 0; /* Clears existing default padding. */
+    box-sizing: border-box; /* Sets a specific width and height including additional padding and border. */
+    text-decoration: none; /* Clears any default text styling  */
+    font-family: 'Josefin Sans', sans-serif; /* Sets the text font to 'Josefin Sans' imported from Google Fonts. */
+    font-size: 18px; /* Sets the webpage's text font size. */
+}
+
+body {
+    background-color: #e9e9e9; /* Background color is set. */
+}
+
+header { /* Stylesheet for the header section. */
+    display: flex; /* A flex box is set for performing advanced layouts. */
+    flex-direction: column; /* Displays the header's elements vertically. */
+    align-items: center; /* Centers the items position vertically. */
+}
+
+.logo { /* Stylesheet for the logo image. */
+    margin-top: 50px; /* The top margin is set. */
+    width: 200px; /* A width of 200px is set. */
+}
+
+nav ul { /* Stylesheet for the unordered list items in the nav bar. */
+    display: flex; /* Applies a flexbox layout. */
+    list-style: none; /* Clears default bullet listing on nav items. */
+}
+
+nav li { /* Stylesheet for each nav list item. */
+    margin: 50px 130px; /* Sets up the margin for each nav item. */
+}
+
+nav li a { /* Stylesheet for each individual nav item link. */
+    color: black; /* Sets the text color to black. */
+}
+
+nav li a:hover { /* Changes the color on item when interacted. */
+    color: #2e5f85; /* Sets the text color when hovered on. */
+}
+
+main { /* Stylesheet for the main section. */
+    background-color: white; /* Sets the main section's background color to white. */
+    width: 1024px; /* The width is set. */
+    margin: 0 auto; /* Centers the main section's position. */
+}
+
+h2 { /* Stylesheet for the headings. */
+    font-family: 'Protest Guerrilla', sans-serif; /* Sets the text font to 'Protest Guerrilla' imported from Google Fonts. */
+    font-size: 48px; /* Sets the heading's font size. */
+    margin-bottom: 20px; /* Sets bottom margin. */
+}
+
+.first_sect { /* Stylesheet for the first section. */
+    padding: 0 50px; /* Sets the padding. */
+    padding-top: 50px; /* Sets the top padding. */
+}
+
+.first_sect h2 { /* Stylesheet for the first section's heading 2. */
+    padding-top: 10px; /* Sets the top padding. */
+}
+
+.title_head { /* Stylesheet for the heading 1. */
+    font-size: 135px; /* Sets the font size. */
+    font-family: 'Protest Guerrilla', sans-serif; /* Sets the font. */
+    line-height: 100px; /* Sets the line spacing. */
+}
+
+.title_desc { /* Stylesheet for the title description paragraph. */
+    width: 800px; /* Sets the description conatiner's width. */
+    margin-bottom: 20px; /* Sets bottom margin. */
+}
+
+.title_desc p { /* Stylesheet for the title paragraph. */
+    font-size: 25px; /* Sets the font size. */
+}
+
+.headings { /* headings stylesheet. */
+    column-count: 3; /* Divides the paragraphs into 3 columns. */
+    padding: 0 50px; /* Sets the padding. */
+}
+
+.heading2 { /* heading2 stylesheet. */
+    padding-top: 20px; /* Sets the padding. */
+}
+
+.grid_albums { /* Stylesheet for the albums container. */
+    display: grid; /* Grid layout is applied. */
+    grid-template-areas: /* Specifies area positioning for each album. */
+        "img1 img2 img3"
+        "img1 img4 img5";
+    grid-template-columns: 1fr 25% 25%; /* Specifies a position of one fraction and two halves. */
+    margin: 50px 0; /* Sets the margin. */
+}
+
+.grid_albums img { /* Stylesheet for the album images. */
+    width: 100%; /* Sets the width to full size. */
+    height: 100%; /* Sets the height to full size. */
+    object-fit: fill; /* Displays the full image covering its area. */
+}
+
+.album_cov { /* Stylesheet for the first album image. */
+    grid-area: img1; /* Specifies the grid area created earlier. */
+}
+
+.author_sect { /* Stylesheet for the author section. */
+    display: flex; /* A flex box is set for performing advanced layouts. */
+    align-items: center; /* Centers the items position vertically. */
+    padding: 0 50px; /* Sets the padding. */
+    padding-bottom: 50px; /* Sets the bottom padding. */
+    gap: 50px; /* Creates a gap between items. */
+}
+
+.author_prof h2 { /* Author heading stylesheet. */
+    text-align: center; /* Centers the heading. */
+}
+
+.author_prof p { /* Author description stylesheet. */
+    margin-left: 50px; /* Sets the left margin. */
+}
+
+.author_pic img { /* Author profile stylesheet. */
+    width: 200px; /* Sets the image's width. */
+    border-radius: 50%; /* Round frame. */
+    overflow: hidden; /* Hides any image overflow. */
+    margin-right: 50px; /* Sets the right margin. */
+}
+
+footer { /* Footer stylesheet. */
+    background-color: #14181d; /* Sets the footer's background color. */
+    color: white; /* Sets the text color to white. */
+    padding: 50px; /* Sets the padding. */
+    margin: 0 auto; /* Centers the footer's position. */
+    width: 1024px; /* Sets the footer's width. */
+    text-align: center; /* Centers the text. */
+}
+
+@media screen and (max-width: 1024px) { /* Modify the layout for tablet devices. */
+
+    .logo { /* Logo stylesheet. */
+        margin-top: 30px; /* Sets the top margin. */
+        width: 80px; /* Sets the logo's width. */
+    }
+
+    nav li { /* Adjusting nav items. */
+        margin: 30px 60px; /* Sets the margin. */
+    }
+
+    main { /* Main section stylesheet. */
+        width: 540px; /* Sets the main section's width. */
+    }
+
+    h2 { /* All headings stylesheet. */
+        font-size: 48px; /* Sets the heading font size for tablet. */
+        font-family: 'Protest Guerrilla', sans-serif; /* Sets the font. */
+        margin-bottom: 20px; /* Sets the bottom margin. */
+        text-align: center; /* Centers the text. */
+    }
+    
+    .first_sect { /* First section stylesheet. */
+        padding: 0 30px; /* Sets the padding. */
+        padding-top: 30px; /* Sets the top padding. */
+    }
+
+    .title_head { /* Heading 1 stylesheet. */
+        font-size: 48px; /* Sets the font size. */
+        font-family: 'Protest Guerrilla', sans-serif; /* Sets the font. */
+        line-height: normal; /* Sets a normal line spacing in heading 1. */
+        text-align: center; /* Centers heading 1. */
+    } 
+
+    .first_sect h2 { /* Heading 2 stylesheet. */
+        padding-top: 0; /* Sets the top padding. */
+        text-align: center; /* Centers heading 2. */
+    }
+
+    .title_desc { /* Title description stylesheet. */
+        width: 480px; /* Sets the width. */
+        margin-bottom: 20px; /* Sets the bottom margin. */
+    }
+
+    .title_desc p {
+        font-size: 18px;
+    }
+
+    .headings { /* Headings container stylesheet */
+        column-count: 1; /* Sets the number of columns to one. */
+        padding: 0 30px; /* Sets the padding. */
+    }
+
+    .heading2 { /* Heading 2 div stylesheet. */
+        padding-top: 20px; /* Sets the top padding. */
+    }
+
+    .headings p { /* Stylesheet for all paragraphs inside the headings container. */
+        font-size: 18px; /* Sets the font size. */
+    }
+
+    .heading2 p { /* Stylesheet for all paragraphs inside the headings container. */
+        font-size: 18px; /* Sets the font size. */
+    }
+
+    .album_cov { /* First album image stylesheet. */
+        display: none; /* Hides the first album image. */
+    }
+
+    .grid_albums { /* Stylesheet for the album container. */
+        grid-template-areas: /* Specifies area positioning for each album (Tablet). */
+            "img2 img3"
+            "img4 img5";
+        grid-template-columns: 1fr 50%; /* Specifies the area position of two equal columns. */
+        margin: 30px 0; /* Sets the margin. */
+    }
+
+    .grid_albums img { /* Album images stylesheet. */
+        width: 100%; /* Sets the width to full size. */
+        height: 100%; /* Sets the height to full size. */
+        object-fit: fill; /* Displays the full image covering its assigned area. */
+    }
+
+    .author_sect { /* Author section stylesheet for tablet. */
+        padding: 0 30px; /* Sets the padding. */
+        padding-bottom: 30px; /* Sets the bottom padding. */
+    }
+
+    .author_prof p { /* Author description stylesheet. */
+        font-size: 18px; /* Sets the font size. */
+    }
+
+    footer { /* Footer stylesheet. */
+        padding : 30px; /* Sets the padding. */
+        width: 540px; /* Sets the width. */
+    }
+}
+
+@media screen and (max-width: 720px) { /* Modify the layout for large mobile devices. */
+
+    .logo { /* Logo stylesheet. */
+        margin-top: 20px; /* Modify the top margin. */
+    }
+
+    nav li { /* Nav items stylesheet. */
+        margin: 20px 50px; /* Modify the nav items' margin. */
+    }
+
+    main { /* Main section stylesheet . */
+        width: 100%; /* Set width to full size. */
+    }
+
+    .headings { /* Headings container stylesheet. */
+        padding: 0 20px; /* Padding is set. */
+    }
+
+    .title_desc { /* Title description stylesheet. */
+        width: 100%; /* Sets the width to full size. */
+    }
+
+    .author_sect { /* Author section stylesheet. */
+        padding: 0 20px; /* Modify the padding. */
+        padding-top: 20px; /* Modify the top padding. */
+        flex-direction: column-reverse; /* Arranges the order of items in reverse. */
+    }
+
+    .author_prof { /* Author text container stylesheet. */
+        width: 100%; /* Width set to full size. */
+    }
+
+    .author_prof p { /* Author paragraph stylesheet. */
+        margin-left: 12px; /* Sets the left margin. */
+        margin-bottom: 12px; /* Sets the bottom margin. */
+    }
+
+    .author_prof h2 { /* Author heading stylesheet. */
+        margin-top: 12px; /* Sets the top margin. */
+        text-align: center; /* Centers the author heading. */
+    }
+    
+    .author_pic img {/* Author image stylesheet. */
+        align-items: center; /* Centers the image. */
+    }
+
+    .grid_albums { /* Album container stylesheet. */
+        grid-template-areas: /* Specifies area positioning for each album (Large mobile). */
+            "img2"
+            "img3"
+            "img4"
+            "img5";
+        grid-template-columns: 100%; /* Modifies the albums' area position to full size. */
+    }
+
+    footer { /* Footer stylesheet. */
+        padding: 20px; /* Padding is set. */
+        width: 100%; /* Width is set to full size. */
+    }
+}
+    
+@media screen and (max-width: 540px) { /* Modify the layout for small mobile devices. */
+
+    .logo { /* Logo stylesheet. */
+        margin-top: 12px; /* Modify the top margin. */
+    }
+
+    nav li { /* Nav item stylesheet. */
+        margin: 15px 20px; /* Modify the margin. */
+    }
+
+    main { /* Main section stylesheet. */
+        width: 100%; /* Width is set to full size. */
+    }
+
+    .first_sect { /* First section stylesheet. */
+        padding: 0 12px; /* Modify the padding. */
+    }
+
+    .title_desc { /* Title description stylesheet. */
+        width: 100%; /* Sets the width to full size. */
+    }
+
+    .headings { /* Headings container stylesheet. */
+        padding: 0 12px; /* Modify the padding. */
+    }
+
+    .grid_albums { /* Album container stylesheet. */
+        grid-template-areas: /* Specifies area positioning for each album (Small mobile). */
+            "img2"
+            "img3"
+            "img4"
+            "img5";
+        grid-template-columns: 100%; /* Specifies the area position to full size. */
+    }
+
+    .author_sect { /* Author section stylesheet. */
+        flex-direction: column-reverse; /* Arranges the items in reverse. */
+        padding: 0 12px 12px; /* Modifies the padding. */
+    }
+
+    .author_prof { /* Author text container stylesheet. */
+        width: 100%; /* Sets the width to full size. */
+    }
+
+    .author_prof p { /* Author paragraph stylesheet. */
+        margin-left: 12px; /* Sets the left margin. */
+    }
+
+    .author_prof h2 { /* Author heading stylesheet. */
+        text-align: center; /* Centers the author heading. */
+    }
+    
+    .author_pic img {/* Author image stylesheet. */
+        margin: 0 auto; /* Centers the image. */
+    }
+
+    footer { /* Footer stylesheet. */
+        padding: 12px; /* Modifies the padding. */
+        width: 100%; /* Sets the width to full size. */
+    }
+}
+
+    
